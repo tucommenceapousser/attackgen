@@ -28,7 +28,14 @@ st.set_page_config(
 )
 
 st.markdown("<title>AttackGen by trhacknon</title>", unsafe_allow_html=True)
-
+st.markdown(
+    """
+    <script>
+        document.title = "AttackGen by trhacknon";
+    </script>
+    """,
+    unsafe_allow_html=True
+)
 # ------------------ Sidebar ------------------ #
 
 with st.sidebar:
