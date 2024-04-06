@@ -19,7 +19,10 @@ import streamlit as st
 import requests
 
 # ------------------ Streamlit UI Configuration ------------------ #
+# Spécifier le titre de la page HTML
+st.markdown("<title>AttackGen by trhacknon</title>", unsafe_allow_html=True)
 
+# Modifier le titre de la page lors du partage
 st.set_page_config(
     page_title="AttackGen by trhacknon",
     page_icon="👾",
