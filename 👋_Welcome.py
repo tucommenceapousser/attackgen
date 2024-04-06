@@ -21,7 +21,7 @@ import requests
 # ------------------ Streamlit UI Configuration ------------------ #
 
 st.set_page_config(
-    page_title="AttackGen",
+    page_title="AttackGen by trhacknon",
     page_icon="👾",
 )
 
@@ -141,21 +141,21 @@ with st.sidebar:
 
     st.sidebar.markdown("### <span style='color: #1DB954;'>About</span>", unsafe_allow_html=True)        
     
-    st.sidebar.markdown("Created by [Matt Adams](https://www.linkedin.com/in/matthewrwadams)")
+    st.sidebar.markdown("Modded by [trhacknon](https://www.linkedin.com/in/)")
 
     st.sidebar.markdown(
-        "⭐ Star on GitHub: [![Star on GitHub](https://img.shields.io/github/stars/mrwadams/attackgen?style=social)](https://github.com/mrwadams/attackgen)"
+        "⭐ Star on GitHub: [![Star on GitHub](https://img.shields.io/github/stars/tucommenceapousser/attackgen?style=social)](https://github.com/tucommenceapousser/attackgen)"
     )
 
 
 # ------------------ Main App UI ------------------ #
 
-st.markdown("# <span style='color: #1DB954;'>AttackGen 👾</span>", unsafe_allow_html=True)
+st.markdown("# <span style='color: #1DB954;'>AttackGen by trhacknon 👾</span>", unsafe_allow_html=True)
 st.markdown("<span style='color: #1DB954;'> **Use MITRE ATT&CK and Large Language Models to generate attack scenarios for incident response testing.**</span>", unsafe_allow_html=True)
 st.markdown("---")
 
 st.markdown("""          
-            ### Welcome to AttackGen!
+            ### Welcome to AttackGen by trhacknon!
             
             The MITRE ATT&CK framework is a powerful tool for understanding the tactics, techniques, and procedures (TTPs) used by threat actors; however, it can be difficult to translate this information into realistic scenarios for testing.
 
