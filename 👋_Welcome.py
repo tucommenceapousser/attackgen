@@ -20,7 +20,6 @@ import requests
 
 # ------------------ Streamlit UI Configuration ------------------ #
 # Spécifier le titre de la page HTML
-st.markdown("<title>AttackGen by trhacknon</title>", unsafe_allow_html=True)
 
 # Modifier le titre de la page lors du partage
 st.set_page_config(
@@ -28,6 +27,7 @@ st.set_page_config(
     page_icon="👾",
 )
 
+st.markdown("<title>AttackGen by trhacknon</title>", unsafe_allow_html=True)
 
 # ------------------ Sidebar ------------------ #
 
