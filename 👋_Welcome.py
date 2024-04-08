@@ -15,30 +15,64 @@ A copy of the licence is provided with this program. If you are unable
 to view it, please see https://www.gnu.org/licenses/
 """
 
-import streamlit as st
 import requests
+import streamlit as st
+import os
+
+# Récupérer l'e-mail à partir de la variable d'environnement
+email = os.getenv("STREAMLIT_EMAIL")
+
+# Si l'e-mail n'est pas défini, demandez-le à l'utilisateur
+if email is None:
+    email = os.getenv("STREAMLIT_EMAIL")
 
 # ------------------ Streamlit UI Configuration ------------------ #
-# Spécifier le titre de la page HTML
 
-# Modifier le titre de la page lors du partage
+
+
+
+# Télécharger l'image SVG localement
+url = "https://trknmgl-paygen.replit.app/trkn.svg"
+response = requests.get(url)
+with open("trkn.svg", "wb") as f:
+    f.write(response.content)
+    email="jeremydiliotti@gmail.com"
+# Configurer la page avec l'icône SVG local
 st.set_page_config(
     page_title="AttackGen by trhacknon",
-    page_icon="👾",
+    page_icon="trkno.svg"
 )
 
-st.markdown("<title>AttackGen by trhacknon</title>", unsafe_allow_html=True)
-st.markdown(
-    """
-    <script>
-        document.title = "AttackGen by trhacknon";
-    </script>
-    """,
-    unsafe_allow_html=True
-)
+
 # ------------------ Sidebar ------------------ #
-
 with st.sidebar:
+    # Ajoutez vos styles CSS pour personnaliser la barre latérale ici
+
+    st.markdown(
+        """
+        <style>
+        /* Styles pour la barre latérale */
+        .sidebar .sidebar-content {
+            background-color: #00ffff !important; /* Couleur de fond */
+            color: #000000 !important; /* Couleur du texte */
+            border-right: 2px solid #00ff00 !important; /* Bordure de côté */
+        }
+        .sidebar .sidebar-content .sidebar-section .sidebar-section-content {
+            padding: 20px !important; /* Espacement interne */
+        }
+        .sidebar .sidebar-content .sidebar-section .sidebar-section-content .stMarkdown a {
+            color: #ff6200 !important; /* Couleur des liens */
+        }
+        /* Style pour le titre 'Setup' */
+        .sidebar .sidebar-content .sidebar-section:nth-child(1) .sidebar-section-content .stMarkdown h3 {
+            color: #00ffb7 !important; /* Couleur du titre */
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Votre contenu de la barre latérale ici
     st.sidebar.markdown("### <span style='color: #1DB954;'>Setup</span>", unsafe_allow_html=True)
     # Add model selection input field to the sidebar
     model_provider = st.selectbox(
@@ -149,7 +183,7 @@ with st.sidebar:
 
     st.sidebar.markdown("---")
 
-    st.sidebar.markdown("### <span style='color: #1DB954;'>About</span>", unsafe_allow_html=True)        
+    st.sidebar.markdown("### <span style='color: #1DB954;'>About trhacknon</span>", unsafe_allow_html=True)        
     
     st.sidebar.markdown("Modded by [trhacknon](https://www.linkedin.com/in/)")
 
@@ -162,6 +196,7 @@ with st.sidebar:
 
 st.markdown("# <span style='color: #1DB954;'>AttackGen by trhacknon 👾</span>", unsafe_allow_html=True)
 st.markdown("<span style='color: #1DB954;'> **Use MITRE ATT&CK and Large Language Models to generate attack scenarios for incident response testing.**</span>", unsafe_allow_html=True)
+st.markdown("<a href='https://trknmgl-paygen.replit.app/trkn.svg' style='display: inline-block; width: 50%; transform: scale(0.5);'><img src='https://trknmgl-paygen.replit.app/trkn.svg' alt='Click to see the source'></a>", unsafe_allow_html=True)
 st.markdown("---")
 
 st.markdown("""          
