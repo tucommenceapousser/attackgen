@@ -1,6 +1,28 @@
 [theme]
-primaryColor = "#1DB954"
-backgroundColor = "#2B2B2B"
-secondaryBackgroundColor = "#444654"
-textColor = "#C0C0C0"
-font = "monospace"
+base="dark"
+primaryColor="purple"
+backgroundColor="#000000"
+secondaryBackgroundColor="#0D47A1"
+textColor="#FFFFFF"
+font="sans serif"
+fontSize=14
+favicon="https://static-trkn.replit.app/trkn.ico"
+accentColor="#00FF00"  # Couleur d'accentuation
+highlightColor="#FFFF00"  # Couleur de mise en évidence
+borderColor="#CCCCCC"  # Couleur des bordures
+linkColor="#FF0000"  # Couleur des liens
+buttonColor="#FFA500"  # Couleur des boutons
+sidebarBackgroundColor="#fff000"  # Couleur de fond de la barre latérale
+sidebarTextColor="#FFFFFF"  # Couleur du texte dans la barre latérale
+sidebarHoverColor="#555555"  # Couleur au survol des éléments de la barre latérale
+sidebarActiveColor="#FF0000"  # Couleur des éléments actifs dans la barre latérale
+sidebarWidth=250  # Largeur de la barre latérale
+
+[general]
+email="jeremydiliotti@gmail.com"
+description="Une application pour générer des attaques par trhacknon"
+url="https://attackgentrkn.onrender.com"
+
+[server]
+favicon="https://static-trkn.replit.app/trkn.ico"
+enableStaticServing=true
