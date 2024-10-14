@@ -2,6 +2,7 @@ langchain
 langchain-core
 langchain-mistralai
 langchain-openai
+langchain_community
 langsmith
 mitreattack-python
 openai
